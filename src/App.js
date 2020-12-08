@@ -1,13 +1,14 @@
 import React from 'react';
-import { DndProvider, useDrag  } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import Box from './Box';
+import Dustbin from './Dustbin';
 
 const App = () => {
-  const [, drager] = useDrag({
-    item: { type: 'Box' }
-})
   return (
-      <div ref={drager}>可拖拽组件 Box</div>
+    <>
+      <Box />
+      <Dustbin />
+    </>
   )
 }
+
 export default App;
